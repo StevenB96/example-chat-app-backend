@@ -5,9 +5,9 @@ services:
     ports:
       - "3001:3001"
       - "27017:27017"
-    volumes:
-      - ./node_modules
-      - .:usr/app
+    # volumes:
+    #   - ./node_modules
+    #   - .:usr/app
     command: npm run dev
         
 

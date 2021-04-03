@@ -1,30 +1,8 @@
-# Use an ubuntu base image.
-FROM ubuntu:18.04
-
-RUN apt-get update && apt-get -qq -y install curl
-
-ENV NODE_VERSION=9.9.0
-
-RUN apt-get install -y curl
-
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-
-ENV NVM_DIR=/root/.nvm
-
-RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
-
-RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
-
-RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
-
-ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
-
-RUN node --version
-
-RUN npm --version
-
-ADD . /usr/example-chat-app
-
-WORKDIR /usr/example-chat-app
-
+# Use node as a base image.
+FROM node:11.12.0
+# Transfer the project directory into the container directory.
+ADD . /usr/example-chat-app-backend
+# Set the current working directory.
+WORKDIR /usr/example-chat-app-backend
+# Install all dependencies.
 RUN npm install
