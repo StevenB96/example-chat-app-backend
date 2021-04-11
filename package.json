@@ -36,8 +36,7 @@
     "mongodb": "^3.6.6",
     "morgan": "^1.9.0",
     "nodemon": "^2.0.7",
-    "uws": "^200.0.0",
-    "ws": "^7.4.4"
+    "uws": "10.148.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
