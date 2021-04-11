@@ -1,8 +1,7 @@
 # Use node as a base image.
 FROM node:11.12.0
 # Install a supported C++11 compiler.
-RUN apk add --update \
-libc6-compat
+RUN apk add --update libc6-compat
 # Transfer the project directory into the container directory.
 ADD . /usr/example-chat-app-backend
 # Set the current working directory.
