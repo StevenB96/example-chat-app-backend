@@ -8,4 +8,4 @@ ADD . /usr/example-chat-app-backend
 # Set the current working directory.
 WORKDIR /usr/example-chat-app-backend
 # Install all dependencies.
-# RUN npm install
+RUN npm install
