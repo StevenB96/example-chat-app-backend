@@ -1,6 +1,6 @@
 import {MongoClient} from 'mongodb'
 
-const URL = 'mongodb://mongo:27017';
+const URL = '172.19.0.1:27017';
 
 
 export default class Database{
