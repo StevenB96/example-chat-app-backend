@@ -5,6 +5,6 @@ ADD . /usr/example-chat-app-backend
 # Set the current working directory.
 WORKDIR /usr/example-chat-app-backend
 # Install a supported C++11 compiler.
-RUN apk add --update \libc6-compat
+# RUN apk add --update \libc6-compat
 # Install all dependencies.
 RUN npm install
